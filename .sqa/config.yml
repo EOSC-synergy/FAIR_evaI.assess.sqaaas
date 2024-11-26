@@ -1,0 +1,20 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/2.2.1
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/PalomoIFCA/FAIR_evaI:
+      branch: main
+      repo: https://github.com/PalomoIFCA/FAIR_evaI
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Sty:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI PyOphidia:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-cerulean-vulture.sh
+        container: qc.sty_queasy-mustard-starfish
+timeout: 5400
