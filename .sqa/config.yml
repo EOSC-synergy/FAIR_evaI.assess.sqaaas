@@ -11,10 +11,72 @@ environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI git:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-amethyst-zonkey.sh
+        container: qc.acc_pokey-blue-flamingo
+  QC.Doc:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-lemon-quokka.sh
+        container: qc.doc_paltry-harlequin-butterfly
+      github.com/PalomoIFCA/FAIR_evaI git:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-mustard-flamingo.sh
+        container: qc.doc_whiny-lime-burmese
+      github.com/PalomoIFCA/FAIR_evaI markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamy-rose-husky.sh
+        container: qc.doc_skinny-violet-shark
+      github.com/PalomoIFCA/FAIR_evaI restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-amber-bloodhound.sh
+        container: qc.doc_zippy-xanthic-greyhound
+  QC.Lic:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.leaky-beige-terrier.sh
+        container: qc.lic_homely-salmon-gorilla
+  QC.Met:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-harlequin-gharial.sh
+        container: qc.met_whiny-amber-sheepdog
+  QC.Sec:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-copper-jackal.sh
+        container: qc.sec_chewy-gamboge-quokka
   QC.Sty:
     repos:
-      github.com/PalomoIFCA/FAIR_evaI PyOphidia:
+      github.com/PalomoIFCA/FAIR_evaI flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gloppy-cerulean-vulture.sh
-        container: qc.sty_queasy-mustard-starfish
+        - /usr/bin/env sh .sqa/script.silly-champagne-moth.sh
+        container: qc.sty_seedy-lavender-wolf
+      github.com/PalomoIFCA/FAIR_evaI hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-cobalt-beagle.sh
+        container: qc.sty_foggy-pink-wolverine
+      github.com/PalomoIFCA/FAIR_evaI jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-olivine-centipede.sh
+        container: qc.sty_scanty-bistre-woodlouse
+  QC.Uni:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-purple-eagle.sh
+        container: qc.uni_randy-thistle-camel
+  QC.Ver:
+    repos:
+      github.com/PalomoIFCA/FAIR_evaI get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-cream-antelope.sh
+        container: qc.ver_wheezy-heliotrope-coral
 timeout: 5400
