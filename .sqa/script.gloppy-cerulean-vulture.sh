@@ -5,5 +5,5 @@
 
 (
 cd github.com/PalomoIFCA/FAIR_evaI &&
-    jsonlint-cli "**/*.json"
+    PyOphidia --path .
 )
