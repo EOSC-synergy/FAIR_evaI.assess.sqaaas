@@ -15,60 +15,60 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/FAIR_evaI git:
         commands:
-        - /usr/bin/env sh .sqa/script.greasy-scarlet-newfoundland.sh
-        container: qc.acc_lanky-alizarin-axolotl
+        - /usr/bin/env sh .sqa/script.paltry-peach-newt.sh
+        container: qc.acc_pokey-buff-lobster
   QC.Doc:
     repos:
       github.com/PalomoIFCA/FAIR_evaI find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-saffron-axolotl.sh
-        container: qc.doc_baggy-amaranth-gar
+        - /usr/bin/env sh .sqa/script.muzzy-aqua-tuatara.sh
+        container: qc.doc_snoopy-lemon-walrus
       github.com/PalomoIFCA/FAIR_evaI git:
         commands:
-        - /usr/bin/env sh .sqa/script.slimy-orchid-alligator.sh
-        container: qc.doc_pretty-flax-mammoth
+        - /usr/bin/env sh .sqa/script.snazzy-tomato-sloth.sh
+        container: qc.doc_beady-ecru-jaguar
       github.com/PalomoIFCA/FAIR_evaI markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-celadon-bobcat.sh
-        container: qc.doc_sloppy-white-barracuda
+        - /usr/bin/env sh .sqa/script.paltry-lemon-crane.sh
+        container: qc.doc_lousy-olive-gorilla
       github.com/PalomoIFCA/FAIR_evaI restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.craggy-white-koala.sh
-        container: qc.doc_bluesy-tan-ostrich
+        - /usr/bin/env sh .sqa/script.pretty-indigo-lionfish.sh
+        container: qc.doc_foggy-silver-earwig
   QC.Lic:
     repos:
       github.com/PalomoIFCA/FAIR_evaI licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-pumpkin-spaniel.sh
-        container: qc.lic_scaly-magenta-cichlid
+        - /usr/bin/env sh .sqa/script.lovely-green-jackal.sh
+        container: qc.lic_freaky-zucchini-indri
   QC.Met:
     repos:
       github.com/PalomoIFCA/FAIR_evaI cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-magnolia-ladybird.sh
-        container: qc.met_jumpy-pumpkin-wolverine
+        - /usr/bin/env sh .sqa/script.flaky-periwinkle-eleuth.sh
+        container: qc.met_snippy-asparagus-goose
   QC.Sec:
     repos:
       github.com/PalomoIFCA/FAIR_evaI bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-beige-wombat.sh
-        container: qc.sec_wiggy-azure-rottweiler
+        - /usr/bin/env sh .sqa/script.chummy-magenta-leopard.sh
+        container: qc.sec_goopy-magnolia-budgerigar
   QC.Sty:
     repos:
       github.com/PalomoIFCA/FAIR_evaI flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-celadon-echidna.sh
-        container: qc.sty_cozy-tan-macaque
+        - /usr/bin/env sh .sqa/script.frumpy-bronze-boar.sh
+        container: qc.sty_scaly-ivory-akbash
   QC.Uni:
     repos:
       github.com/PalomoIFCA/FAIR_evaI pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.lousy-buff-dachsbracke.sh
-        container: qc.uni_lumpy-wheat-capuchin
+        - /usr/bin/env sh .sqa/script.sickly-seashell-sheep.sh
+        container: qc.uni_ugly-amaranth-shark
   QC.Ver:
     repos:
       github.com/PalomoIFCA/FAIR_evaI get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-chartreuse-dodo.sh
-        container: qc.ver_shabby-charcoal-antelope
+        - /usr/bin/env sh .sqa/script.squeaky-zucchini-shark.sh
+        container: qc.ver_wiggy-silver-moose
 timeout: 5400
