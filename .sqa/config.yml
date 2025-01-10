@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.3.0
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/PalomoIFCA/FAIR_evaI:
       branch: main
@@ -15,60 +15,68 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/FAIR_evaI git:
         commands:
-        - /usr/bin/env sh .sqa/script.snippy-gamboge-burmese.sh
-        container: qc.acc_frumpy-aquamarine-mongoose
+        - /usr/bin/env sh .sqa/script.ugly-magnolia-dodo.sh
+        container: qc.acc_snoopy-grey-whippet
   QC.Doc:
     repos:
       github.com/PalomoIFCA/FAIR_evaI find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-magenta-terrier.sh
-        container: qc.doc_fuzzy-cinnamon-grouse
+        - /usr/bin/env sh .sqa/script.bumpy-emerald-tiger.sh
+        container: qc.doc_shaggy-fuchsia-seal
       github.com/PalomoIFCA/FAIR_evaI git:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-platinum-iguana.sh
-        container: qc.doc_gloppy-viridian-retriever
+        - /usr/bin/env sh .sqa/script.messy-lilac-panda.sh
+        container: qc.doc_tacky-periwinkle-peccary
       github.com/PalomoIFCA/FAIR_evaI markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-xanthic-wombat.sh
-        container: qc.doc_lanky-chartreuse-dollar
+        - /usr/bin/env sh .sqa/script.queasy-ultramarine-meerkat.sh
+        container: qc.doc_seedy-scarlet-whale
       github.com/PalomoIFCA/FAIR_evaI restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.zippy-sepia-scorpion.sh
-        container: qc.doc_lovely-mustard-wolverine
+        - /usr/bin/env sh .sqa/script.lumpy-amaranth-spitz.sh
+        container: qc.doc_homey-xanthic-burmese
   QC.Lic:
     repos:
       github.com/PalomoIFCA/FAIR_evaI licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-turquoise-husky.sh
-        container: qc.lic_lanky-myrtle-quoll
+        - /usr/bin/env sh .sqa/script.lousy-yellow-maltese.sh
+        container: qc.lic_cozy-cyan-sheep
   QC.Met:
     repos:
       github.com/PalomoIFCA/FAIR_evaI cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.frumpy-ochre-booby.sh
-        container: qc.met_nippy-white-eagle
+        - /usr/bin/env sh .sqa/script.chewy-indigo-goat.sh
+        container: qc.met_snappy-chartreuse-sheepdog
   QC.Sec:
     repos:
       github.com/PalomoIFCA/FAIR_evaI bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-teal-swan.sh
-        container: qc.sec_cloudy-charcoal-termite
+        - /usr/bin/env sh .sqa/script.slimy-vermilion-dugong.sh
+        container: qc.sec_squeaky-pink-gibbon
   QC.Sty:
     repos:
       github.com/PalomoIFCA/FAIR_evaI flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.ready-tomato-stoat.sh
-        container: qc.sty_stuffy-goldenrod-hyena
+        - /usr/bin/env sh .sqa/script.fuzzy-violet-dachsbracke.sh
+        container: qc.sty_foggy-azure-gerbil
+      github.com/PalomoIFCA/FAIR_evaI hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shabby-alizarin-coati.sh
+        container: qc.sty_boozy-magnolia-zonkey
+      github.com/PalomoIFCA/FAIR_evaI jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-celadon-gharial.sh
+        container: qc.sty_crappy-coral-toucan
   QC.Uni:
     repos:
       github.com/PalomoIFCA/FAIR_evaI pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-dandelion-havanese.sh
-        container: qc.uni_cranky-brass-barb
+        - /usr/bin/env sh .sqa/script.cheeky-heliotrope-squirrel.sh
+        container: qc.uni_whiny-zucchini-setter
   QC.Ver:
     repos:
       github.com/PalomoIFCA/FAIR_evaI get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-azure-gibbon.sh
-        container: qc.ver_gimpy-burgundy-caterpillar
+        - /usr/bin/env sh .sqa/script.gimpy-dandelion-quokka.sh
+        container: qc.ver_messy-wisteria-ferret
 timeout: 5400

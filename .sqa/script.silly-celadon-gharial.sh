@@ -5,5 +5,5 @@
 
 (
 cd github.com/PalomoIFCA/FAIR_evaI &&
-    flake8 . --exclude
+    jsonlint-cli "**/*.json"
 )
