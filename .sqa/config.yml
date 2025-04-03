@@ -2,73 +2,19 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: release/2.3.0
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/PalomoIFCA/FAIR_evaI:
-      branch: main
+      branch: testactions
       repo: https://github.com/PalomoIFCA/FAIR_evaI
 environment:
   JPL_DOCKERFORCEBUILD: enabled
   JPL_KEEPGOING: enabled
 sqa_criteria:
-  QC.Acc:
-    repos:
-      github.com/PalomoIFCA/FAIR_evaI git:
-        commands:
-        - /usr/bin/env sh .sqa/script.jumpy-vermilion-blue.sh
-        container: qc.acc_ready-cinnabar-civet
-  QC.Doc:
-    repos:
-      github.com/PalomoIFCA/FAIR_evaI find_doc_files.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.bumpy-sepia-armadillo.sh
-        container: qc.doc_silly-mauve-sparrow
-      github.com/PalomoIFCA/FAIR_evaI git:
-        commands:
-        - /usr/bin/env sh .sqa/script.stinky-aqua-greyhound.sh
-        container: qc.doc_pokey-seashell-lizard
-      github.com/PalomoIFCA/FAIR_evaI markdownlint:
-        commands:
-        - /usr/bin/env sh .sqa/script.woozy-myrtle-antelope.sh
-        container: qc.doc_baggy-bistre-seahorse
-      github.com/PalomoIFCA/FAIR_evaI restructuredtext-lint:
-        commands:
-        - /usr/bin/env sh .sqa/script.bluesy-harlequin-chamois.sh
-        container: qc.doc_seedy-asparagus-blue
-  QC.Lic:
-    repos:
-      github.com/PalomoIFCA/FAIR_evaI licensee:
-        commands:
-        - /usr/bin/env sh .sqa/script.slimy-beige-frog.sh
-        container: qc.lic_paltry-jade-dragon
-  QC.Met:
-    repos:
-      github.com/PalomoIFCA/FAIR_evaI cff-converter-python:
-        commands:
-        - /usr/bin/env sh .sqa/script.squirrely-olivine-kakapo.sh
-        container: qc.met_crappy-coral-wrasse
-  QC.Sec:
-    repos:
-      github.com/PalomoIFCA/FAIR_evaI bandit:
-        commands:
-        - /usr/bin/env sh .sqa/script.skimpy-sepia-akita.sh
-        container: qc.sec_slimy-saffron-gorilla
   QC.Sty:
     repos:
       github.com/PalomoIFCA/FAIR_evaI flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.tacky-tan-rabbit.sh
-        container: qc.sty_snappy-celadon-bat
-  QC.Uni:
-    repos:
-      github.com/PalomoIFCA/FAIR_evaI pytest:
-        commands:
-        - /usr/bin/env sh .sqa/script.ready-white-tiger.sh
-        container: qc.uni_randy-teal-rottweiler
-  QC.Ver:
-    repos:
-      github.com/PalomoIFCA/FAIR_evaI get_git_tags.py:
-        commands:
-        - /usr/bin/env sh .sqa/script.scummy-goldenrod-javanese.sh
-        container: qc.ver_fuzzy-bronze-beaver
+        - /usr/bin/env sh .sqa/script.sloppy-red-antelope.sh
+        container: qc.sty_blurry-jade-numbat
 timeout: 5400
