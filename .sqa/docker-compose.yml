@@ -1,5 +1,5 @@
 services:
-  qc.sty_blurry-jade-numbat:
+  qc.sty_frumpy-denim-guppy:
     command: sleep 6000000
     image: pipelinecomponents/flake8:0.9.0
     volumes:

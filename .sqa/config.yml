@@ -15,6 +15,6 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/FAIR_evaI flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-red-antelope.sh
-        container: qc.sty_blurry-jade-numbat
+        - /usr/bin/env sh .sqa/script.greasy-blue-rottweiler.sh
+        container: qc.sty_frumpy-denim-guppy
 timeout: 5400
